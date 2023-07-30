@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.top-outer{
+    width: 100%;
+    height: 50vh;
+    background-color: #CEE6F3;
+    position: relative;
+    overflow: hidden;
+}
+
+.road-top{
+    width: 100%;
+    height: 40vh;
+    background-color:darkslategray;
+    overflow: hidden;
+}
+
+.road-bottom{
+    width: 100%;
+    height: 10vh;
+    background-color: lightsalmon;
+}
+
+/*==========================================*/
+
+.car-wrapper{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    right: -200px;
+    animation: leftToRight 10s linear infinite ;
+}
+
+.car-wrapper>.car{
+    width: 100%;
+}
+
+.wheel{
+    width: 35px;
+    position: absolute;
+    bottom: 30px;
+    animation-name: forwardWheel;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.wheel-1{
+    left: 18px;
+}
+
+.wheel-2{
+    right: 30px;
+}
+
+.m-1{
+    position: absolute;
+    width: 50%;
+    top: 20px;
+    bottom: 0;
+}
+
+.m-2{
+    position: absolute;
+    width: 50%;
+    right: 0;
+    bottom: 0;
+    top: 20px;
+    z-index: 1;
+}
+
+.cloud-1{
+    width: 150px;
+    position: absolute;
+    right: -150px;
+    animation:  cloud 10s linear infinite;
+}
+
+.cloud-2{
+    width: 150px;
+    position: absolute;
+    right: -150px;
+    top: 150px;
+    animation:  cloud 20s linear infinite;
+}
+
+
+.bird-1{
+    width: 100px;
+    position: absolute;
+    top: 50px;
+    left: -150px;
+    animation: bird-1 10s linear infinite ;
+}
+
+.bird-2{
+    width: 100px;
+    position: absolute;
+    top: 100px;
+    right: -150px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    animation: bird-2 10s linear infinite ;
+}
+/*======================================*/
+
+@keyframes forwardWheel {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+
+}
+
+@keyframes leftToRight {
+    0%{
+        right: -200px;
+        transform: rotateY(0);
+    }
+    50%{
+        right: 1600px;
+    }
+    100%{
+        right: -200px;
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes cloud {
+    from{
+        right: -150px;
+    }
+    to{
+        right: 1600px;
+    }
+}
+
+@keyframes bird-1{
+    from{
+        left: -150px;
+    }
+    to{
+        left: 1600px;
+    }
+}
+
+@keyframes bird-2{
+    from{
+        right: -150px;
+    }
+    to{
+        right: 1600px;
+    }
+}
+
+
+
+
+
+
